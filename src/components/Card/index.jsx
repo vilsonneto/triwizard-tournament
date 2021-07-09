@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import "./style.css";
 
 export const Card = ({ student }) => {

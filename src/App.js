@@ -9,19 +9,11 @@ function App() {
   const [startChallenge, setStartChallenge] = useState(false);
 
   useEffect(() => {
-    fetch("http://hp-api.herokuapp.com/api/characters/students")
+    fetch("https://hp-api.herokuapp.com/api/characters/students")
       .then((request) => request.json())
       .then((request) => setStudentsList([...request]))
       .catch((err) => console.log(err));
   }, []);
-
-  useEffect(() => {
-    console.log(studentsList);
-  }, [studentsList]);
-
-  useEffect(() => {
-    console.log(studentsSelected);
-  }, [studentsSelected]);
 
   const getRandomIntInclusive = (min, max) => {
     min = Math.ceil(min);
@@ -42,7 +34,6 @@ function App() {
       );
 
       witchsSelected = [...witchsSelected, selected];
-      console.log(witchsSelected);
       setStudentsSelected([...witchsSelected]);
     }
   };
