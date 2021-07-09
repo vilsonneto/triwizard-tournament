@@ -16,6 +16,10 @@ function App() {
   }, []);
 
   useEffect(() => {
+    console.log(studentsList);
+  }, [studentsList]);
+
+  useEffect(() => {
     console.log(studentsSelected);
   }, [studentsSelected]);
 
@@ -25,17 +29,15 @@ function App() {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
-  let witchs = [...studentsList];
   const summonParticipants = () => {
-    witchs = [...studentsList];
+    let availableWizards = [...studentsList];
     let witchsSelected = [];
 
     for (let i = 0; i < 3; i++) {
-      console.log(witchs);
-      let studentId = getRandomIntInclusive(0, witchs.length - 1);
-      let selected = witchs[studentId];
+      let studentId = getRandomIntInclusive(0, availableWizards.length - 1);
+      let selected = availableWizards[studentId];
 
-      witchs = [...witchs].filter(
+      availableWizards = [...availableWizards].filter(
         (student) => student.house !== selected.house
       );
 
@@ -43,8 +45,6 @@ function App() {
       console.log(witchsSelected);
       setStudentsSelected([...witchsSelected]);
     }
-
-    return setStudentsSelected([...witchsSelected]);
   };
 
   return (
