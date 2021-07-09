@@ -1,0 +1,28 @@
+.Card {
+  width: 250px;
+  padding: 10px;
+  border: solid 3px;
+  border-radius: 30px;
+  margin: 30px 0;
+  min-height: 450px;
+}
+
+.Card img {
+  width: 70%;
+}
+
+.Card-Hufflepuff {
+  color: yellow;
+}
+
+.Card-Gryffindor {
+  color: red;
+}
+
+.Card-Slytherin {
+  color: green;
+}
+
+.Card-Ravenclaw {
+  color: rgb(25, 57, 161);
+}
