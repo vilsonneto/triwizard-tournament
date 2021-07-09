@@ -15,30 +15,36 @@ function App() {
       .catch((err) => console.log(err));
   }, []);
 
+  useEffect(() => {
+    console.log(studentsSelected);
+  }, [studentsSelected]);
+
   const getRandomIntInclusive = (min, max) => {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   };
 
+  let witchs = [...studentsList];
   const summonParticipants = () => {
-    let witchs = [...studentsList];
+    witchs = [...studentsList];
     let witchsSelected = [];
 
     for (let i = 0; i < 3; i++) {
+      console.log(witchs);
       let studentId = getRandomIntInclusive(0, witchs.length - 1);
       let selected = witchs[studentId];
-      // console.log(selected.house);
 
       witchs = [...witchs].filter(
         (student) => student.house !== selected.house
       );
 
-      console.log(witchs);
-      witchsSelected.push(selected);
+      witchsSelected = [...witchsSelected, selected];
+      console.log(witchsSelected);
+      setStudentsSelected([...witchsSelected]);
     }
 
-    return setStudentsSelected(witchsSelected);
+    return setStudentsSelected([...witchsSelected]);
   };
 
   return (

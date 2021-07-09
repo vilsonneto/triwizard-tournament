@@ -1,3 +1,16 @@
+/* RESET */
+
+div,
+h1,
+h2,
+h3,
+p,
+button {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
@@ -24,8 +37,19 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+button.Start,
+button.Retry {
+  border: 2px solid goldenrod;
+  background-color: #282c34;
+  border-radius: 10px;
+  color: goldenrod;
+  padding: 10px 30px;
+  margin: 10px;
+}
+
+button.Start:hover,
+button.Retry:hover {
+  background-color: gray;
 }
 
 @keyframes App-logo-spin {

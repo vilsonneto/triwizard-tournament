@@ -5,10 +5,29 @@
   border-radius: 30px;
   margin: 30px 0;
   min-height: 450px;
+  animation-name: aparecer;
+  animation-duration: 2s;
+  font-family: cursive;
+}
+
+.Card .image-container {
+  width: 70%;
+  margin: 0 auto;
+  min-height: 270px;
 }
 
 .Card img {
-  width: 70%;
+  width: 100%;
+}
+
+.Card__name {
+  font-size: 27px;
+  margin-bottom: 10px;
+}
+
+.Card__info {
+  font-size: 22px;
+  margin-bottom: 5px;
 }
 
 .Card-Hufflepuff {
@@ -25,4 +44,19 @@
 
 .Card-Ravenclaw {
   color: rgb(25, 57, 161);
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.2;
+  }
+  68% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
 }

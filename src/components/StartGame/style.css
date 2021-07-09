@@ -1,0 +1,15 @@
+.Start-container img {
+  width: 70%;
+  max-width: 500px;
+  margin-bottom: 20px;
+}
+
+.Start-container h1 {
+  color: goldenrod;
+  margin-bottom: 10px;
+}
+
+.Start-container p {
+  color: whitesmoke;
+  margin-bottom: 20px;
+}

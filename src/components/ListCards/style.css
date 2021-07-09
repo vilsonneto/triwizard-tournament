@@ -1,0 +1,30 @@
+.ListCards {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+button.Retry {
+  position: fixed;
+  bottom: 10px;
+}
+
+@media (min-width: 600px) {
+  .ListCards {
+    margin-bottom: 0;
+  }
+  button.Retry {
+    position: static;
+  }
+}
+
+@media (min-width: 960px) {
+  .ListCards {
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 90%;
+  }
+}
